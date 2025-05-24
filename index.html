@@ -3,20 +3,30 @@
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
-    <title>انتخاب صندلی اتوبوس</title>
+    <title>گردش با خانم احدی</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>رزرو صندلی سفر</h1>
-    <p>لطفاً یک صندلی انتخاب کنید:</p>
-    <div class="bus">
-        <!-- صندلی‌ها به صورت داینامیک با JS اضافه می‌شوند -->
-    </div>
-    <form id="reserveForm">
-        <input type="text" placeholder="نام و نام خانوادگی" required>
-        <input type="hidden" id="selectedSeat">
-        <button type="submit">پرداخت و رزرو</button>
-    </form>
+    <header>
+        <h1>به گردش با خانم احدی خوش آمدید</h1>
+    </header>
+    <main>
+        <section class="intro">
+            <p>سفری خاطره‌انگیز با مدیریت خانم احدی</p>
+        </section>
+        <section class="form-section">
+            <h2>ثبت‌نام در سفر</h2>
+            <form id="signupForm">
+                <input type="text" id="name" placeholder="نام و نام خانوادگی" required>
+                <button type="submit">ثبت‌نام آزمایشی</button>
+            </form>
+            <p id="successMsg" style="display:none;color:green;">ثبت‌نام با موفقیت انجام شد!</p>
+        </section>
+        <section class="list-section">
+            <h3>افراد ثبت‌نام‌شده:</h3>
+            <ul id="nameList"></ul>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
